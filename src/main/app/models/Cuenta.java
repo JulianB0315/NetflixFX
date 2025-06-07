@@ -6,14 +6,14 @@ public class Cuenta {
     private int idCuenta;
     private String correo;
     private String contrasena;
-    private LocalDate fechaRegsitro;
+    private LocalDate fechaRegistro; // Cambiado para reflejar el nombre correcto en la base de datos
     private int idRol;
 
-    public Cuenta(int idCuenta, String correo, String contrasena, LocalDate fechaRegsitro, int idRol) {
+    public Cuenta(int idCuenta, String correo, String contrasena, LocalDate fechaRegistro, int idRol) {
         this.idCuenta = idCuenta;
         this.correo = correo;
         this.contrasena = contrasena;
-        this.fechaRegsitro = fechaRegsitro;
+        this.fechaRegistro = fechaRegistro;
         this.idRol = idRol;
     }
 
@@ -41,12 +41,12 @@ public class Cuenta {
         this.contrasena = contrasena;
     }
 
-    public LocalDate getFechaRegsitro() {
-        return fechaRegsitro;
+    public LocalDate getFechaRegistro() {
+        return fechaRegistro;
     }
 
-    public void setFechaRegsitro(LocalDate fechaRegsitro) {
-        this.fechaRegsitro = fechaRegsitro;
+    public void setFechaRegistro(LocalDate fechaRegistro) {
+        this.fechaRegistro = fechaRegistro;
     }
 
     public int getIdRol() {
