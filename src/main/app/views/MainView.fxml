@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<VBox fx:id="rootPane" prefWidth="1200.0" prefHeight="900.0"
+      xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="main.app.views.MainViewController"
+      spacing="0">
+    <!-- Barra superior -->
+    <HBox fx:id="topBar" spacing="20" alignment="CENTER_LEFT" styleClass="top-bar" prefHeight="80.0" prefWidth="1200.0" >
+        <children>
+            <Label fx:id="titulo" text="NetflixFX" styleClass="logo">
+                <font>
+                    <Font size="40.0"/>
+                </font>
+            </Label>
+            <Pane HBox.hgrow="ALWAYS"/>
+            <ComboBox fx:id="idioma" promptText="Español" prefWidth="120.0" styleClass="idioma">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Español"/>
+                        <String fx:value="English"/>
+                        <String fx:value="Português"/>
+                        <String fx:value="Français"/>
+                        <String fx:value="Deutsch"/>
+                        <String fx:value="Italiano"/>
+                        <String fx:value="日本語"/>
+                        <String fx:value="한국어"/>
+                        <String fx:value="中文"/>
+                    </FXCollections>
+                </items>
+            </ComboBox>
+            <Button fx:id="iniciarSesion" text="Iniciar sesión" styleClass="btn-red" onAction="#iniciarSesion"/>
+        </children>
+    </HBox>
+
+    <!-- Mensajes centrales -->
+    <VBox spacing="10" alignment="CENTER" prefHeight="250.0" prefWidth="1200.0" styleClass="central-messages">
+        <children>
+            <Label text="Películas y series ilimitadas y mucho más" styleClass="headline"/>
+            <Label text="A partir de S/ 28.90. Cancela cuando quieras." styleClass="subheadline"/>
+            <Label text="¿Quieres ver NetflixFX ya? Ingresa tu email para crear una cuenta o reiniciar tu membresía de NetflixFX."
+                   wrapText="true" styleClass="description"/>
+        </children>
+    </VBox>
+
+    <!-- Formulario de registro -->
+    <HBox spacing="10" alignment="CENTER" prefHeight="80.0" prefWidth="1200.0" styleClass="register-form">
+        <children>
+            <TextField fx:id="emailField" promptText="Email" prefWidth="350.0" styleClass="input-email"/>
+            <Button fx:id="Registrarse" text="Comenzar" prefWidth="140.0" styleClass="btn-red" onAction="#registrarse"/>
+        </children>
+    </HBox>
+
+    <!-- Carrusel de tendencias -->
+    <VBox spacing="10" alignment="CENTER" prefHeight="300.0" prefWidth="1200.0" styleClass="carousel-section">
+        <children>
+            <Label text="Tendencias" styleClass="carousel-title"/>
+            <HBox spacing="10" alignment="CENTER">
+                <children>
+                    <Button fx:id="btnIzquierda" text="⟨" styleClass="carousel-nav" onAction="#moverIzquierda"/>
+                    <ScrollPane fx:id="scrollPane" hbarPolicy="ALWAYS" vbarPolicy="NEVER"
+                        fitToHeight="true" fitToWidth="false"
+                        prefHeight="220.0" prefWidth="540.0" styleClass="carousel-scroll">
+                        <content>
+                            <HBox fx:id="carouselHBox" spacing="15" alignment="CENTER_LEFT" styleClass="carousel">
+                                <!-- Las imágenes se cargarán dinámicamente desde el controlador -->
+                            </HBox>
+                        </content>
+                    </ScrollPane>
+                    <Button fx:id="btnDerecha" text="⟩" styleClass="carousel-nav" onAction="#moverDerecha"/>
+                </children>
+            </HBox>
+        </children>
+    </VBox>
+</VBox>
