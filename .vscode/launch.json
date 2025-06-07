@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "TestConexion",
+            "request": "launch",
+            "mainClass": "main.app.database.TestConexion",
+            "projectName": "NetflixFX_da99470a"
+        },
+        {
+            "type": "java",
             "name": "Launch JavaFX App",
             "request": "launch",
             "mainClass": "main.Main",
