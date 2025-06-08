@@ -1,78 +1,69 @@
 package main.app.models;
 
 public class Contenido {
-    private int idContenido;
+    private int id;
     private String titulo;
     private String descripcion;
-    private int anio;
-    private Integer duracion; // Puede ser null para series
-    private String tipo;
     private String imagenUrl;
+    private String categoria;
+    private int duracion;
 
-    public Contenido(int idContenido, String titulo, String descripcion, int anio, Integer duracion, String tipo,
-            String imagenUrl) {
-        this.idContenido = idContenido;
+    public Contenido(int id, String titulo, String descripcion, String imagenUrl, String categoria, int duracion) {
+        this.id = id;
         this.titulo = titulo;
         this.descripcion = descripcion;
-        this.anio = anio;
-        this.duracion = duracion;
-        this.tipo = tipo;
         this.imagenUrl = imagenUrl;
+        this.categoria = categoria;
+        this.duracion = duracion;
     }
 
-    public int getIdContenido() {
-        return idContenido;
-    }
-
-    public void setIdContenido(int idContenido) {
-        this.idContenido = idContenido;
+    // Getters
+    public int getId() {
+        return id;
     }
 
     public String getTitulo() {
         return titulo;
     }
 
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-
     public String getDescripcion() {
         return descripcion;
-    }
-
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
-    }
-
-    public int getAnio() {
-        return anio;
-    }
-
-    public void setAnio(int anio) {
-        this.anio = anio;
-    }
-
-    public Integer getDuracion() {
-        return duracion;
-    }
-
-    public void setDuracion(Integer duracion) {
-        this.duracion = duracion;
-    }
-
-    public String getTipo() {
-        return tipo;
-    }
-
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
     }
 
     public String getImagenUrl() {
         return imagenUrl;
     }
 
+    public String getCategoria() {
+        return categoria;
+    }
+
+    public int getDuracion() {
+        return duracion;
+    }
+
+    // Setters
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
     public void setImagenUrl(String imagenUrl) {
         this.imagenUrl = imagenUrl;
+    }
+
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
+    }
+
+    public void setDuracion(int duracion) {
+        this.duracion = duracion;
     }
 }
