@@ -1,0 +1,22 @@
+/* Estilo para el contenedor principal */
+.profiles-hbox {
+    -fx-spacing: 20;
+    -fx-padding: 20;
+    -fx-alignment: center;
+}
+
+/* Estilo para los botones de perfil */
+.profile-button {
+    -fx-background-color: #e50914;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10 20;
+    -fx-background-radius: 5;
+}
+
+/* Estilo para las imágenes de avatar */
+.avatar-image {
+    -fx-border-radius: 50%;
+    -fx-background-radius: 50%;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 10, 0.5, 0, 0);
+}
