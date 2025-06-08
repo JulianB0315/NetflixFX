@@ -53,24 +53,33 @@ public class MainViewController {
 
     @FXML
     private void iniciarSesion() {
-        abrirVentana("/main/app/views/LoginView.fxml", "Iniciar Sesión");
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/main/app/views/LoginView.fxml"));
+            Parent root = loader.load();
+
+            Stage stage = new Stage();
+            stage.setTitle("Iniciar sesión");
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (Exception e) {
+            System.err.println("Error al cargar la vista de inicio de sesión: " + e.getMessage());
+            e.printStackTrace();
+        }
     }
 
     @FXML
     private void registrarse() {
-        abrirVentana("/main/app/views/RegisterView.fxml", "Registrarse");
-    }
-
-    private void abrirVentana(String fxmlPath, String titulo) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlPath));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/main/app/views/RegisterView.fxml"));
             Parent root = loader.load();
+
             Stage stage = new Stage();
-            stage.setTitle(titulo);
+            stage.setTitle("Registrarse");
             stage.setScene(new Scene(root));
             stage.show();
         } catch (Exception e) {
-            System.err.println("Error al abrir la ventana: " + e.getMessage());
+            System.err.println("Error al cargar la vista de registro: " + e.getMessage());
+            e.printStackTrace();
         }
     }
 
