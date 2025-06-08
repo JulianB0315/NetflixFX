@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+
+<VBox spacing="20" alignment="CENTER" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="main.app.views.HistorialViewController" prefWidth="600.0" prefHeight="400.0" styleClass="historial-root">
+    <children>
+        <Label text="Historial de Visualizaciones" styleClass="historial-title"/>
+        <ListView fx:id="historialListView" prefWidth="550.0" prefHeight="350.0" styleClass="historial-list"/>
+    </children>
+</VBox>
