@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.Button?>
+
+<ScrollPane hbarPolicy="NEVER" vbarPolicy="ALWAYS" fitToWidth="true" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="main.app.views.DashboardController" prefWidth="1600.0" prefHeight="900.0" styleClass="dashboard-root">
+    <content>
+        <VBox spacing="20" alignment="TOP_CENTER" prefWidth="1600.0" styleClass="dashboard-root">
+            <!-- Botones de recargar y historial -->
+            <HBox alignment="CENTER_RIGHT" prefWidth="1600.0" spacing="10">
+                <Button text="Recargar" onAction="#recargarDashboard" style="-fx-background-color: #e50914; -fx-text-fill: white; -fx-padding: 10 20;"/>
+                <Button text="Historial" onAction="#abrirHistorial" style="-fx-background-color: #555555; -fx-text-fill: white; -fx-padding: 10 20;"/>
+            </HBox>
+
+            <!-- Sección Hero -->
+            <VBox spacing="10" alignment="CENTER" prefHeight="400.0" prefWidth="1600.0" styleClass="hero-section">
+                <children>
+                    <ImageView fx:id="heroImage" fitWidth="1600.0" fitHeight="300.0" preserveRatio="true" styleClass="hero-image"/>
+                    <VBox spacing="5" alignment="CENTER" styleClass="hero-text">
+                        <Label fx:id="heroTitle" text="Título destacado" styleClass="hero-title"/>
+                        <Label fx:id="heroDescription" text="Descripción de la película o serie destacada." styleClass="hero-description" wrapText="true"/>
+                    </VBox>
+                </children>
+            </VBox>
+
+            <!-- Apartado "Tendencias" -->
+            <VBox spacing="10" alignment="CENTER" prefHeight="500.0" prefWidth="1600.0" styleClass="section">
+                <children>
+                    <Label text="Tendencias" styleClass="section-title"/>
+                    <ScrollPane hbarPolicy="ALWAYS" vbarPolicy="NEVER" fitToHeight="true" fitToWidth="false"
+                                prefHeight="400.0" prefWidth="1400.0" styleClass="scroll-pane">
+                        <content>
+                            <HBox fx:id="tendenciasHBox" spacing="15" alignment="CENTER_LEFT" styleClass="content-box">
+                                <!-- Las cajas de las películas se cargarán dinámicamente -->
+                            </HBox>
+                        </content>
+                    </ScrollPane>
+                </children>
+            </VBox>
+
+            <!-- Apartado "Para ti" -->
+            <VBox spacing="10" alignment="CENTER" prefHeight="500.0" prefWidth="1600.0" styleClass="section">
+                <children>
+                    <Label text="Para ti" styleClass="section-title"/>
+                    <ScrollPane hbarPolicy="ALWAYS" vbarPolicy="NEVER" fitToHeight="true" fitToWidth="false"
+                                prefHeight="400.0" prefWidth="1400.0" styleClass="scroll-pane">
+                        <content>
+                            <HBox fx:id="paraTiHBox" spacing="15" alignment="CENTER_LEFT" styleClass="content-box">
+                                <!-- Las cajas de las películas se cargarán dinámicamente -->
+                            </HBox>
+                        </content>
+                    </ScrollPane>
+                </children>
+            </VBox>
+
+            <!-- Apartado "Más contenido" -->
+            <VBox spacing="10" alignment="CENTER" prefHeight="500.0" prefWidth="1600.0" styleClass="section">
+                <children>
+                    <Label text="Más contenido" styleClass="section-title"/>
+                    <ScrollPane hbarPolicy="ALWAYS" vbarPolicy="NEVER" fitToHeight="true" fitToWidth="false"
+                                prefHeight="400.0" prefWidth="1400.0" styleClass="scroll-pane">
+                        <content>
+                            <HBox fx:id="cualquierPeliculaHBox" spacing="15" alignment="CENTER_LEFT" styleClass="content-box">
+                                <!-- Las cajas de las películas se cargarán dinámicamente -->
+                            </HBox>
+                        </content>
+                    </ScrollPane>
+                </children>
+            </VBox>
+        </VBox>
+    </content>
+</ScrollPane>
