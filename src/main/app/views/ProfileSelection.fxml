@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
+
+<VBox spacing="20" alignment="CENTER" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="main.app.views.ProfileSelectionController" prefWidth="600.0" prefHeight="400.0">
+    <children>
+        <Label text="Selecciona tu perfil" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #e50914;"/>
+        <HBox fx:id="profilesHBox" spacing="20" alignment="CENTER">
+            <!-- Botones de perfiles dinámicos -->
+        </HBox>
+        <Button text="Crear nuevo perfil" onAction="#mostrarFormularioCrearPerfil" style="-fx-background-color: #e50914; -fx-text-fill: white; -fx-padding: 10 20;"/>
+        
+        <!-- Formulario para crear un nuevo perfil -->
+        <VBox fx:id="crearPerfilForm" spacing="10" alignment="CENTER" visible="false" managed="false">
+            <Label text="Crear un nuevo perfil" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+            <TextField fx:id="nombrePerfilField" promptText="Nombre del perfil" prefWidth="300.0"/>
+            <HBox spacing="15" alignment="CENTER">
+                <Button text="Guardar" onAction="#crearPerfil" style="-fx-background-color: #e50914; -fx-text-fill: white; -fx-padding: 10 20;"/>
+                <Button text="Cancelar" onAction="#ocultarFormularioCrearPerfil" style="-fx-background-color: #555555; -fx-text-fill: white; -fx-padding: 10 20;"/>
+            </HBox>
+        </VBox>
+    </children>
+</VBox>
