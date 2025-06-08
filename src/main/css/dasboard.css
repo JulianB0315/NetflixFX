@@ -1,0 +1,220 @@
+/* Estilo para el contenedor principal */
+.dashboard-root {
+    -fx-background-color: black; /* Cambiado a un valor válido */
+    -fx-padding: 20;
+}
+
+/* Estilo para el título principal */
+.dashboard-title {
+    -fx-font-family: "Helvetica Neue", Arial, sans-serif;
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #e50914; /* Rojo característico de Netflix */
+    -fx-padding: 20;
+    -fx-alignment: center;
+}
+
+/* Estilo para las secciones */
+.section {
+    -fx-background-color: #141414; /* Fondo gris oscuro */
+    -fx-padding: 20; /* Aumentar el relleno de las secciones */
+    -fx-border-radius: 10;
+    -fx-spacing: 15; /* Aumentar el espacio entre elementos */
+}
+
+/* Estilo para los títulos de las secciones */
+.section-title {
+    -fx-font-family: "Arial";
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-padding: 10 0;
+}
+
+/* Estilo para los ScrollPane */
+.scroll-pane {
+    -fx-background-color: transparent; /* Asegúrate de que sea un valor válido */
+    -fx-padding: 0; /* Eliminar relleno */
+    -fx-border-width: 0; /* Eliminar bordes */
+}
+
+/* Ocultar las barras de desplazamiento del ScrollPane */
+.scroll-pane .scroll-bar:horizontal,
+.scroll-pane .scroll-bar:vertical {
+    -fx-opacity: 0; /* Hacer invisibles las barras */
+    -fx-pref-width: 0; /* Ancho de la barra horizontal */
+    -fx-pref-height: 0; /* Altura de la barra vertical */
+    -fx-max-width: 0;
+    -fx-max-height: 0;
+}
+
+/* Ajustar el fondo del ScrollPane */
+.scroll-pane .viewport {
+    -fx-background-color: transparent; /* Fondo transparente */
+}
+
+/* Restablecer estilos predeterminados de las barras de desplazamiento */
+.scroll-bar {
+    -fx-background-color: transparent; /* Fondo transparente */
+    -fx-opacity: 1; /* Asegúrate de que las barras sean visibles si es necesario */
+}
+
+/* Ajustar los botones de las barras de desplazamiento */
+.scroll-bar > .increment-button,
+.scroll-bar > .decrement-button {
+    -fx-background-color: transparent; /* Fondo transparente */
+    -fx-padding: 0; /* Eliminar relleno */
+}
+
+/* Ajustar las flechas de los botones de las barras de desplazamiento */
+.scroll-bar > .increment-button > .increment-arrow,
+.scroll-bar > .decrement-button > .decrement-arrow {
+    -fx-background-color: transparent; /* Fondo transparente */
+    -fx-effect: null; /* Eliminar cualquier efecto incompatible */
+}
+
+/* Ajustar el "thumb" de las barras de desplazamiento */
+.scroll-bar > .thumb {
+    -fx-background-color: #555555; /* Color gris oscuro */
+    -fx-background-radius: 5; /* Bordes redondeados */
+}
+
+/* Ajustar la esquina del ScrollPane */
+.scroll-pane > .corner {
+    -fx-background-color: transparent; /* Fondo transparente */
+}
+
+/* Estilo para los elementos de contenido (ejemplo: etiquetas o imágenes) */
+.content-box > Label {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10;
+    -fx-background-color: #333333;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-alignment: center;
+}
+
+/* Estilo para las imágenes de contenido */
+.content-box > ImageView {
+    -fx-fit-width: 150px;
+    -fx-fit-height: 220px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 10, 0.5, 0, 0); /* Cambiado a un valor válido */
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-margin: 0; /* Eliminar márgenes */
+    -fx-cursor: hand; /* Cambia el cursor a una mano */
+}
+
+/* Estilo para la sección Hero */
+.hero-section {
+    -fx-background-color: black; /* Cambiado a un valor válido */
+    -fx-padding: 0; /* Eliminar relleno externo */
+    -fx-alignment: center;
+    -fx-spacing: 0; /* Eliminar espacio entre elementos */
+    -fx-min-height: 500px; /* Hacer el Hero más grande */
+}
+
+/* Estilo para la imagen del Hero */
+.hero-image {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 20, 0.5, 0, 0); /* Cambiado a un valor válido */
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-fit-width: 1200px; /* Ajustar al ancho completo */
+    -fx-fit-height: 400px; /* Ajustar al alto deseado */
+}
+
+/* Estilo para el texto del Hero */
+.hero-text {
+    -fx-background-color: rgba(0, 0, 0, 0.7); /* Cambiado a un valor válido */
+    -fx-padding: 20;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-alignment: center;
+    -fx-spacing: 10; /* Reducir el espacio entre el título y la descripción */
+}
+
+/* Estilo para el título del Hero */
+.hero-title {
+    -fx-font-family: "Helvetica Neue", Arial, sans-serif;
+    -fx-font-size: 36px; /* Hacer el título más grande */
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+/* Estilo para la descripción del Hero */
+.hero-description {
+    -fx-font-family: "Helvetica Neue", Arial, sans-serif;
+    -fx-font-size: 18px; /* Hacer la descripción más grande */
+    -fx-text-fill: white;
+    -fx-padding: 10;
+    -fx-text-alignment: center;
+}
+
+/* Estilo para los elementos de contenido */
+.content-box > VBox {
+    -fx-alignment: center;
+    -fx-spacing: 10;
+    -fx-padding: 10;
+    -fx-background-color: #141414;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0.5, 0, 0);
+}
+
+/* Estilo para las imágenes de contenido */
+.content-box > VBox > ImageView {
+    -fx-fit-width: 250px; /* Aumentar el ancho */
+    -fx-fit-height: 375px; /* Aumentar la altura */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 10, 0.5, 0, 0);
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+}
+
+/* Estilo para los títulos de contenido */
+.content-box > VBox > Label {
+    -fx-text-fill: white;
+    -fx-font-size: 16px; /* Tamaño de fuente ajustado */
+    -fx-wrap-text: true;
+    -fx-text-alignment: center;
+    -fx-alignment: center;
+    -fx-max-width: 250px; /* Ajustar al ancho de la imagen */
+}
+
+/* Estilo para los contenedores de las películas */
+.content-box > VBox {
+    -fx-alignment: center;
+    -fx-spacing: 15;
+    -fx-padding: 15;
+    -fx-background-color: #141414;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0.5, 0, 0);
+}
+
+/* Cambiar el cursor al pasar sobre los botones */box > VBox > Label {
+.button {
+    -fx-cursor: hand; /* Cambia el cursor a una mano */   -fx-font-size: 14px;
+}    -fx-wrap-text: true;
+
+    -fx-text-alignment: center;
+}
+
+/* Cambiar el cursor al pasar sobre los botones */
+.button {
+    -fx-cursor: hand; /* Cambia el cursor a una mano */
+}
+
+/* Estilo para los botones de acción */
+.button {
+    -fx-background-color: #e50914;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10 20;
+    -fx-border-radius: 5;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #f40612;
+}
