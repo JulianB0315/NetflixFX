@@ -21,7 +21,14 @@ public class Main extends Application {
             System.err.println("No se encontró el archivo CSS.");
         }
         stage.setScene(scene);
-        stage.setTitle("Hola JavaFX");
+        stage.setTitle("NetfixFX");
+        // Configurar el ícono de la aplicación
+        java.net.URL iconUrl = getClass().getResource("/main/app/views/img/icon.jpg");
+        if (iconUrl != null) {
+            stage.getIcons().add(new javafx.scene.image.Image(iconUrl.toExternalForm()));
+        } else {
+            System.err.println("No se encontró el ícono de la aplicación.");
+        }
         stage.show();
     }
 
